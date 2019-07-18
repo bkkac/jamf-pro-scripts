@@ -69,7 +69,9 @@ if isfile(plistFile):
     pl = readPlist(plistFile)
     currentFirefoxVersion=pl["CFBundleShortVersionString"]
 else:
-    currentFirefoxVersion="none"
+#    currentFirefoxVersion="none" - OLD
+#    changeing "none" to "0" change by bcheney
+     currentFirefoxVersion="0"
 #
 # # Get latest version of Firefox and filename
 for latestFirefoxVersion in glob.glob('/tmp/Firefox*'):
