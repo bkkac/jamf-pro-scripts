@@ -5,7 +5,7 @@
 # Set screensaver to SaveHollywood with setings to use videos in:
 # /Users/Shared/ScreenSaverVideos
 
-# Get user logged into console and put into variable "user"
+# Get user logged into console and put into variable "user" 
 user=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");'`
 # If you plan on deploying to mac os other than 14 (Mojave) then check the mac os
 # osMajor=$(sw_vers -productVersion | awk -F"." '{print $2}')
