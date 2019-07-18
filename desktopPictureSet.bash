@@ -4,8 +4,8 @@
 # https://github.com/scriptingosx/desktoppr
 # WIll Pierce
 # 2019 07 16
-# No pont in running if desktoppr in not installed
-# Check to see that desktoppr is installed
+# No pont in running if desktoppr is not installed
+# Check to see if desktoppr is installed
 if [[ ! -e "/usr/local/bin/desktoppr" ]]; then
 	echo "desktoppr NOT found."
 	exit 0
@@ -13,7 +13,7 @@ if [[ ! -e "/usr/local/bin/desktoppr" ]]; then
 fi
 # set Variables
 #
-# Full path to the deskttops you want to use for screens 0 1 2 or leave blank to set with JAMF PRO
+# Full path to the deskttops you want to use for screens 0, 1, and 2 or leave blank to set with JAMF PRO policy
 desktop_0="/Users/pierce/Desktop/elDorklo.jpg" 
 desktop_1="/Users/pierce/Desktop/elDorklo.jpg" 
 desktop_2="/Users/pierce/Desktop/Screen Shot 2019-06-17 at 10.28.00 AM.png"
