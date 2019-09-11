@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 
 # Variables
 applicationTitle="Creative Cloud" # Firefox no .app

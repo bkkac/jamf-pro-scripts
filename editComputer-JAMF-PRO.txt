@@ -1,0 +1,8 @@
+﻿#!/bin/bash
+
+jssURL=$(defaults read /Library/Preferences/com.jamfsoftware.jamf.plist jss_url | sed s'/.$//')
+id=$(jamf recon | grep '<computer_id>' | xmllint --xpath xmllint --xpath '/computer_id/text()' -)
+
+open -a "Safari" "$jssURL/computers.html?id=$id&o=r"
+
+exit 0

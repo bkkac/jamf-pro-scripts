@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 # https://www.jamf.com/blog/streamlining-your-macos-upgrade-process/
 # Will Peirce
 # 2019 05 16

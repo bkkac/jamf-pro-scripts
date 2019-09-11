@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 # Variables
 applicationTitle="Campton Fonts" 
 customTrigger="provision_camptonFonts" # The name of the cuntom Trigger for the Provisiong policy:  provision_firefox

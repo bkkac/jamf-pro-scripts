@@ -1,0 +1,72 @@
+﻿#!/usr/bin/python
+# Serialize Sublime Text
+# Will Pierce
+# 20170418
+# Run this after deploying the license file package
+# Package should install license file to /private/tmp/
+#imports
+import os
+import shutil
+from SystemConfiguration import SCDynamicStoreCopyConsoleUser
+import sys
+print
+# Variables
+username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]];
+installingFile = "License.sublime_license"
+installingFilePath = "/private/tmp/"
+installToPath = "/Users/"+username+"/Library/Application Support/Sublime Text 3/Local"
+overwrite = "Yes"
+#
+# Modules
+#
+# Module for checking for the installFile
+def checkForFile():
+    print "Checking for %s in %s. . . " % (installingFile, installingFilePath)
+    if os.path.isfile(os.path.join(installingFilePath, installingFile)):
+    	print "%s is found we can continue." % installingFile
+    	print
+    else:
+    	print >> sys.stderr , "%s NOT found in %s, backing out eh!" % (installingFile, installingFilePath)
+    	quit()
+#
+# Module for checking for the installation folder
+def installToPathCheck():
+	print "Checking for installation path for %s" % installingFile
+	if os.path.isdir(installToPath):
+		print "%s, found we can continue." % installToPath
+		print
+	else:
+		print "%s, NOT found, backing out eh." % installToPath
+		quit()
+#
+# Module for checking to see if the file is already installed
+def installingFileCheck():
+	print "Checking to see if %s is already installed" % installingFile
+	if os.path.isfile(os.path.join(installToPath,installingFile)):
+		print "%s, is installed. Checking overwrite preference. . ." % installingFile
+		if overwrite == "Yes":
+			print "overwrite is set to Yes, overwriting %s." % installingFile
+			print
+		else:
+			print "Overwrite is set to No, quiting."
+			quit()
+	else:
+		print "%s is not installed, lets install. . ." % installingFile
+#
+# Module for installing the file
+def installFile():
+	print "Installing %s. . ." % installingFile
+	shutil.copy2(os.path.join(installingFilePath,installingFile), installToPath)
+	print "Checking the install. . ."
+	if os.path.isfile(os.path.join(installToPath,installingFile)):
+		print "%s, is installed, in %s. All is good." % (installingFile,installToPath)
+		print
+		quit()
+	else:
+		print "Something went bad, file not found."
+#
+# Call the modules
+checkForFile()
+installToPathCheck()
+installingFileCheck()
+installFile()

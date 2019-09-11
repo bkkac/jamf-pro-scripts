@@ -1,0 +1,10 @@
+﻿#!/bin/bash
+
+# check for symlink
+if [ -L "/usr/local/bin" ] ; then
+  rm "/usr/local/bin"
+  mkdir "/usr/local/bin"
+  ln -s "/usr/local/jamf/bin/jamf" "/usr/local/bin/jamf"
+  ln -s "/usr/local/jamf/bin/jamfAgent" "/usr/local/bin/jamfAgent"
+  chown -R root:wheel "/usr/local/bin"
+fi

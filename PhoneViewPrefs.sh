@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 #### Set Phone View preferences for first launch
 #### Will Pierce

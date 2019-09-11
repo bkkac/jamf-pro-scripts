@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 
 # Variables
 applicationTitle="Recon" # Firefox no .app
@@ -55,7 +55,7 @@ else
 	# App is installed
 	/bin/echo "$applicationTitle $version - Installed Successfully" >> $log
 	killAll jamfHelper
-	"$jamfHelperPath"  -startlaunchd -windowType hud -title "$title" -heading "Installed" -description "$applicationTitle version: $version Installed" -icon "$app_IconPath" &
+	"$jamfHelperPath"  -startlaunchd -windowType hud -title "$title" -heading "Installed" -description "$applicationTitle version: $version" -icon "$app_IconPath" &
 	sleep 5
     killAll jamfHelper
 fi

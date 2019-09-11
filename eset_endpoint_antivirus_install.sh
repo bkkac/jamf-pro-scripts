@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 ## https://gist.github.com/neilmartin83/5d0a3845dd4abbfdff244ac21dae6900#file-eset_endpoint_antivirus_install-sh
 ## Will Pierce 2019 02 12
 # Variables - edit to suit your environment

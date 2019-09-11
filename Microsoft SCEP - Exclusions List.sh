@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 /Applications/System\ Center\ Endpoint\ Protection.app/Contents/MacOS/scep_set --section=global 'av_exclude = "/Volumes/Images/*.*::/Volumes/Production/*.*::/Volumes/Creative/*.*::/Volumes/Transfer/*.*::/Volumes/Logos/*.*::"'
 sleep 1

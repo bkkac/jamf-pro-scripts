@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 ##
 ## sets the desktop using `desktoppr`

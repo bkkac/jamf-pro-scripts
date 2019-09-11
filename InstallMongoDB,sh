@@ -1,0 +1,32 @@
+﻿#!/bin/bash
+####################################################################################################
+#
+# ABOUT THIS PROGRAM
+# Script
+#
+# NAME
+#	InstallMongoDB.sh
+#
+# Link to instructions 
+#
+# Requirements:
+# 
+# DESCRIPTION
+# Open a link to: http://qa.collemcvoy.com/w/docs/tips_and_tricks/self_service_installs/mongo/'
+####################################################################################################
+#
+# HISTORY
+#
+version="1.0"
+#
+#	- Created by Chris Moen on 150701
+#	-
+####################################################################################################
+#
+
+###Get the currently logged in user, in a more Apple approved way
+user=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");'`
+#
+sudo su $user -c "open 'http://qa.collemcvoy.com/w/docs/tips_and_tricks/self_service_installs/mongo/'"
+#
+exit 0

@@ -1,4 +1,4 @@
-#!/bin/bash	
+﻿#!/bin/bash	
 
 # Erase and rebuild the Spotlight index.
 # Will Pierce

@@ -1,0 +1,3 @@
+﻿#!/bin/sh
+########################################################################################################
+"/Applications/Install macOS High Sierra.app/Contents/Resources/startosinstall" --eraseinstall --newvolumename "Macintosh HD" --installpackage /Applications/Utilities/QuickAdd-20180803.pkg --nointeraction &

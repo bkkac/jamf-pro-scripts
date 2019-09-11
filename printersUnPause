@@ -1,0 +1,5 @@
+﻿#!/bin/sh
+#EMPTYS ALL PRINTER QUEUES THAT ARE PAUSED
+# cancel -a `lpstat -t | grep disabled | awk '{print $2}'`
+#UNPAUSES PAUSED PRINTERS
+cupsenable `lpstat -t | grep disabled | awk '{print $2}'`

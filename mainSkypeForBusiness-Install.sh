@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 
 # Variables
 applicationTitle="Skype for Business" # Firefox no .app
