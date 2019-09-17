@@ -18,7 +18,7 @@ function SerializeSketch () {
 
     # add serial number for current and all future users
     CurrentUsers=`sudo -u $(ls -l /dev/console | awk {'print $3'}) ls /Users/  | tr '\n' ' '`
-    LicenseKey="SK3-4949-2786-1277-1616-4904"
+    LicenseKey="SK3-xxxx-xxxx-xxxx-xxxx-xxxx"
     echo "`date` Adding license key for current users"
     if [[ -e /Library/Application\ Support/com.bohemiancoding.sketch3 ]]; then
         rm -rf /Library/Application\ Support/com.bohemiancoding.sketch3
