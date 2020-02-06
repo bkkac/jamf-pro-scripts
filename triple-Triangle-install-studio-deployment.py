@@ -7,11 +7,11 @@
 # Indesing should be closed when this happens
 #
 # fonts folder to Adobe InDesign CSX:Fonts folder
-# /Users/Shared/Studio_Deployment/colle_deployment_cc2015_10202016/Fonts/DO_NOT_PUT_IN_SUITECASE_READ_THIS.txt
-# /Users/Shared/Studio_Deployment/colle_deployment_cc2015_10202016/Fonts/PUT_IN_INDESIGN_FONTS_FOLDER.txt
-# /Users/Shared/Studio_Deployment/colle_deployment_cc2015_10202016/Fonts/TTSlu.otf
-# /Users/Shared/Studio_Deployment/colle_deployment_cc2015_10202016/Fonts/TTSluBol.otf
-# /Users/Shared/Studio_Deployment/colle_deployment_cc2015_10202016/Fonts/TTSlugFontLicense.txt
+# /Users/Shared/Studio_Deployment/XX_deployment_cc2015_10202016/Fonts/DO_NOT_PUT_IN_SUITECASE_READ_THIS.txt
+# /Users/Shared/Studio_Deployment/XX_deployment_cc2015_10202016/Fonts/PUT_IN_INDESIGN_FONTS_FOLDER.txt
+# /Users/Shared/Studio_Deployment/XX_deployment_cc2015_10202016/Fonts/TTSlu.otf
+# /Users/Shared/Studio_Deployment/XX_deployment_cc2015_10202016/Fonts/TTSluBol.otf
+# /Users/Shared/Studio_Deployment/XX_deployment_cc2015_10202016/Fonts/TTSlugFontLicense.txt
 #
 # TripleTriangle folder Adobe InDesign CSX:Plug-Ins folder
 # /Users/Shared/Studio_Deployment/colle_deployment_cc2015_10202016/TripleTriangle
@@ -25,7 +25,7 @@ import subprocess
 # Deploy the Triple Triangle zip file and unzip first for this to work.
 # This is done with the policy: 
 # Triple Triangle colle deployment cc2015 10202016.sit Studio Deplyment
-# https://jss.collemcvoy.com:8443/policies.html?id=3350&o=r
+# https://jss.XX.com:8443/policies.html?id=3350&o=r
 #  ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------
 #
 # Variables
@@ -40,9 +40,9 @@ searchPath = "/Applications"
 installingFilePath = "/Users/Shared/Studio_Deployment/"
 #
 # What is the name of the file to install?
-installingFile = "c1c35dfdbfb_colle_deployment_cc2015_10202016.zip"
+installingFile = "c1c35dfdbfb_XX_deployment_cc2015_10202016.zip"
 #
-folderName = "colle_deployment_cc2015_10202016"
+folderName = "XX_deployment_cc2015_10202016"
 #
 #  ---------- ---------- ---------- ---------- ---------- ---------- -----
 # Module for JAMF Helper message with time out
@@ -100,11 +100,11 @@ def checkForApp(appName):
 	jamfHelperMessageTimeOut("Checking for:", "%s \nIn:\n%s" %
                              (appName, searchPath))
 	print ""
-	jamfHelperMessageTimeOut("Installing: colle_deployment_cc2015_10202016/Fonts", "In: Applications/Adobe InDesign CC 2015/Fonts")
-	os.system("cp -pR /Users/Shared/Studio_Deployment/colle_deployment_cc2015_10202016/Fonts/ /Applications/Adobe\ InDesign\ CC\ 2015/Fonts")
-	jamfHelperMessageTimeOut("Installing: colle_deployment_cc2015_10202016/TripleTriangle", "In: Adobe InDesign CC 2015/Plug-Ins")
+	jamfHelperMessageTimeOut("Installing: XX_deployment_cc2015_10202016/Fonts", "In: Applications/Adobe InDesign CC 2015/Fonts")
+	os.system("cp -pR /Users/Shared/Studio_Deployment/XX_deployment_cc2015_10202016/Fonts/ /Applications/Adobe\ InDesign\ CC\ 2015/Fonts")
+	jamfHelperMessageTimeOut("Installing: XX_deployment_cc2015_10202016/TripleTriangle", "In: Adobe InDesign CC 2015/Plug-Ins")
 
-	os.system("cp -pR /Users/Shared/Studio_Deployment/colle_deployment_cc2015_10202016/TripleTriangle /Applications/Adobe\ InDesign\ CC\ 2015/Plug-Ins")
+	os.system("cp -pR /Users/Shared/Studio_Deployment/XX_deployment_cc2015_10202016/TripleTriangle /Applications/Adobe\ InDesign\ CC\ 2015/Plug-Ins")
     else:
         print "Applaction NOT found. %s\nNOT found in:\n%s \n." % (appName, searchPath)
         jamfHelperMessageOK("File NOT found.", "%s\nNOT found in:\n%s \nContact HelpDesk." %
@@ -130,8 +130,8 @@ def installFolder(appVersions, appInstallPath, installingFile):
 #
 checkForFile(installingFile)
 # unzip the file from Triple Triangle
-# print "Un zipping c1c35dfdbfb_colle_deployment_cc2015_10202016.zip"
-# os.system("unzip -o /Users/Shared/Studio_Deployment/c1c35dfdbfb_colle_deployment_cc2015_10202016 -d /Users/Shared/Studio_Deployment/")
+# print "Un zipping c1c35dfdbfb_XX_deployment_cc2015_10202016.zip"
+# os.system("unzip -o /Users/Shared/Studio_Deployment/c1c35dfdbfb_XX_deployment_cc2015_10202016 -d /Users/Shared/Studio_Deployment/")
 # print "Checking on the un zip. . ."z
 
 checkForFolder()
