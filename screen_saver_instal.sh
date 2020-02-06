@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # Variables
-applicationTitle="colle mcvoy" # Firefox no .app
-customTrigger="provision_colleMcvoyScreenSaver" # The name of the cuntom Trigger for the Provisiong policy:  provision_firefox
+applicationTitle="XX" # Firefox no .app
+customTrigger="provision_XXScreenSaver" # The name of the cuntom Trigger for the Provisiong policy:  provision_firefox
 appPath="/Library/Screen Savers" ## Leave blank if /Applacations
 appIcon="thumbnail.png" ## Find the icon name in: "/"$appPath"/"$applicationTitle".app/Contents/Resources/
 jamfHelperPath="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
 jh_icon="/Applications/System Preferences.app/Contents/Resources/ScreenSaverIcon.icns"
 jamfPath="/usr/local/jamf/bin/jamf"
-title="Colle McVoy Provisioning Bot 5000"
+title="XX Provisioning Bot 5000"
 ##########- DONT NOT EDIT BELOW THIS LINE -########## ###############
 appPath="${appPath:-Applications}"
 dateStamp=$( date "+%a %b %d %H%M%S" )
@@ -31,7 +31,7 @@ echo "######### ##########"
 "$jamfHelperPath" -startlaunchd -windowType hud -title "$title" -heading "Installing:" -description "$applicationTitle" -icon "$jh_icon" &
 /usr/local/jamf/bin/jamf policy -trigger $customTrigger
 #
-version=$(defaults read /Library/Screen\ Savers/colle\ mcvoy.saver/Contents/Info.plist CFBundleShortVersionString)
+version=$(defaults read /Library/Screen\ Savers/XX.saver/Contents/Info.plist CFBundleShortVersionString)
 echo $applicationTitle "versions is:" $version
 if [[  ${version} == -n ]]; then
 	# App is not installed
