@@ -1,5 +1,5 @@
 ﻿#!/bin/sh
-## Script to remove the old Adobe Update Server URL that points to cmwymasus02 
+## Script to remove the old Adobe Update Server URL that points to XX 
 ## Check to see if there a confg file if so remove it.
 ## If so remove 
 # 
