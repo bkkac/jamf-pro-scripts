@@ -3,7 +3,7 @@
 # Determine OS version
 osvers=$(sw_vers -productVersion | awk -F. '{print $2}')
 sw_vers=$(sw_vers -productVersion)
-
+#
 # Determine OS build number
 
 sw_build=$(sw_vers -buildVersion)
