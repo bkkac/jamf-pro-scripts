@@ -10,7 +10,7 @@ jamfHelperPath="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/Ma
 ## this works when quoteing the the var
 jh_icon="/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/ApplicationsFolderIcon.icns"
 jamfPath="/usr/local/jamf/bin/jamf"
-title="Colle McVoy Provisioning Bot 5000"
+title="XX Provisioning Bot 5000"
 #
 ## Get the currently logged in user
 user=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");'`

@@ -25,7 +25,7 @@ sudo -u $user defaults -currentHost write com.apple.screensaver idleTime -int 60
 
 sudo -u $user defaults -currentHost write com.apple.screensaver tokenRemovalAction -int 0
 sudo -u $user defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "SaveHollywood" path -string "/Library/Screen Savers/SaveHollywood.saver" type 0
-sudo -u $user defaults -currentHost write fr.whitebox.SaveHollywood assets.library -array "/Users/Shared/CM-ScreenSaverVideos"
+sudo -u $user defaults -currentHost write fr.whitebox.SaveHollywood assets.library -array "/Users/Shared/XX-ScreenSaverVideos"
 sudo -u $user defaults -currentHost write fr.whitebox.SaveHollywood movie.volume.mode 1
 sudo killall -hup cfprefsd
 exit 0

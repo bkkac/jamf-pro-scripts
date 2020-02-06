@@ -10,7 +10,7 @@
 #	You must first create and deploy a launch agent to launch the app.
 # 	launchctl load 
 #	Example:
-#	launchctl load /Users/pierce/Library/LaunchAgents/com.CM.OneDriveLaunch.plist 
+#	launchctl load /Users/pierce/Library/LaunchAgents/com.XX.OneDriveLaunch.plist 
 #	If the $launchAgent parameter is specified (parameter 4), this is the launch agent that will be loaded.
 #
 # If no parameter is specified for parameter 4 the hard coded value in the script will be used.
@@ -31,7 +31,7 @@
 # HARDCODED VALUES ARE SET HERE
 # $4
 # What is the name of the launch agent?
-# Example: launchAgent="/com.CM.OneDriveLaunch.plist"
+# Example: launchAgent="/com.XX.OneDriveLaunch.plist"
 # Leave blank to set in the script policy
 # Example: launchAgent=""
 #

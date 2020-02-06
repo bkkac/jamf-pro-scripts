@@ -18,7 +18,7 @@ fi
 defaults write /Users/$curUser/Library/Preferences/ByHost/com.apple.screensaver.$macUUID.plist PrefsVersion -int 100
 ## Set time out to 15 min or 900 seconds
 defaults write /Users/$curUser/Library/Preferences/ByHost/com.apple.screensaver.$macUUID.plist idleTime -int 900
-defaults write /Users/$curUser/Library/Preferences/ByHost/com.apple.screensaver.$macUUID.plist moduleDict -dict moduleName "colle mcvoy" path "/Library/Screen Savers/colle mcvoy.saver" type -int 0
+defaults write /Users/$curUser/Library/Preferences/ByHost/com.apple.screensaver.$macUUID.plist moduleDict -dict moduleName "XX" path "/Library/Screen Savers/XX.saver" type -int 0
 
 chown $curUser /Users/$curUser/Library/Preferences/ByHost/com.apple.screensaver.$macUUID.plist
 

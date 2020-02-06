@@ -5,7 +5,7 @@
 # ABOUT THIS PROGRAM
 #
 # NAME
-#	configUsed.sh -- Creates a plist com.cm.imaging.plist for imageing date and configuration used. 
+#	configUsed.sh -- Creates a plist com.XX.imaging.plist for imageing date and configuration used. 
 #	So we can use the info in the JSS.
 #
 # SYNOPSIS
@@ -17,7 +17,7 @@
 #	I.I.
 #
 # DESCRIPTION
-#	Wright to the plist, /Library/Preferences/com.cm.imaging values ImageBuildDate ( hard coded to the date) & config.
+#	Wright to the plist, /Library/Preferences/com.XX.imaging values ImageBuildDate ( hard coded to the date) & config.
 ####################################################################################################
 #
 # HISTORY
@@ -41,7 +41,7 @@ configType="smart"
 #
 # What is the name of the config?
 # Examples: 
-# config="CM_10.10_BASE"
+# config="XX_10.10_BASE"
 # config="Studio"
 #
 config="smart_test07"
@@ -79,17 +79,17 @@ echo "arrayType is $arrayType"
 echo -----
 ####################################################################################################
 #
-echo "Writing to: /Library/Preferences/com.cm.imaging Configuration $arrayType"
+echo "Writing to: /Library/Preferences/com.XX.imaging Configuration $arrayType"
 #
-# Wright to: /Library/Preferences/com.cm.imaging Configuration
+# Wright to: /Library/Preferences/com.XX.imaging Configuration
 # use -array for the first config, then -array-add for the configs based on smart configs.
 # Creative Studio for example
-/usr/bin/defaults write /Library/Preferences/com.cm.imaging Configuration "$arrayType" "$config"
+/usr/bin/defaults write /Library/Preferences/com.XX.imaging Configuration "$arrayType" "$config"
 # -array "$( echo 'foo bar' )"
 echo $config
 echo "Checking on wright to Configuration..."
 # Check that the wright....
-ConfigurationCheck=`/usr/bin/defaults read /Library/Preferences/com.cm.imaging Configuration`
+ConfigurationCheck=`/usr/bin/defaults read /Library/Preferences/com.XX.imaging Configuration`
 	if [[ $ConfigurationCheck == *$config* ]];then
 		echo "Confirmed, Configuration value is $ConfigurationCheck"
 	else
@@ -97,13 +97,13 @@ ConfigurationCheck=`/usr/bin/defaults read /Library/Preferences/com.cm.imaging C
 	fi
 ####################################################################################################
 echo -----
-echo "Writing the date to: /Library/Preferences/com.cm.imaging ImageBuildDate"
-# now wright the date to: /Library/Preferences/com.cm.imaging ImageBuildDate
-/usr/bin/defaults write /Library/Preferences/com.cm.imaging ImageBuildDate "$the_date" 
+echo "Writing the date to: /Library/Preferences/com.XX.imaging ImageBuildDate"
+# now wright the date to: /Library/Preferences/com.XX.imaging ImageBuildDate
+/usr/bin/defaults write /Library/Preferences/com.XX.imaging ImageBuildDate "$the_date" 
 #
 echo "Checking on wright to ImageBuildDate..."
 # Check that the wright....
-ImageBuildDateCheck=`/usr/bin/defaults read /Library/Preferences/com.cm.imaging ImageBuildDate`
+ImageBuildDateCheck=`/usr/bin/defaults read /Library/Preferences/com.XX.imaging ImageBuildDate`
 	if [ $ImageBuildDateCheck == $the_date ];then
 		echo "Confirmed, ImageBuildDate value is $ImageBuildDateCheck"
 	else

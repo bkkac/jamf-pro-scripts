@@ -108,7 +108,7 @@ function DetermineLoginState() {
     CONSOLE=$( stat -f%Su /dev/console )
     if [[ "${CONSOLE}" == "root" ]] ; then
     echo "• No user logged in"
-        CMD_PREFIX=""
+        XXD_PREFIX=""
     else
     echo "• User ${CONSOLE} is logged in"
     CMD_PREFIX="sudo -u ${CONSOLE} "

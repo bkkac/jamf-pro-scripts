@@ -16,7 +16,7 @@
 #	Version: 1.0
 #
 #	- Joe Farage, 18.03.2015
-#   - CM customizations by Will Pierce 150617
+#   - XX customizations by Will Pierce 150617
 ####################################################################################################
 # Script to download and install Firefox.
 # Only works on Intel systems.
@@ -85,9 +85,9 @@ if [ '`/usr/bin/uname -p`'="i386" -o '`/usr/bin/uname -p`'="x86_64" ]; then
 		newlyinstalledver=`/usr/bin/defaults read /Applications/Firefox.app/Contents/Info CFBundleShortVersionString`
         if [ "${latestver}" = "${newlyinstalledver}" ]; then
             /bin/echo "`date`: SUCCESS: Firefox has been updated to version ${newlyinstalledver}" >> ${logfile}
-             /bin/echo "`date`: Installing the Firefox CM Settings via policy -event trigger. ${newlyinstalledver}" >> ${logfile}
-            ####### Install the firefoxCm Settings
-           jamf policy -event firefoxSettingsCM
+             /bin/echo "`date`: Installing the Firefox XX Settings via policy -event trigger. ${newlyinstalledver}" >> ${logfile}
+            ####### Install the firefoxXX Settings
+           jamf policy -event firefoxSettingsXX
 	   # /Library/Application\ Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper -windowType hud -title "Firefox Installed" -description "Firefox has been updated." &
         else
             /bin/echo "`date`: ERROR: Firefox update unsuccessful, version remains at ${currentinstalledver}." >> ${logfile}

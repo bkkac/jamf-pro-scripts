@@ -5,9 +5,9 @@
 # Completes Provisioning log file #
 ##############################
 jamfHelperPath="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
-jh_icon="/Library/User Pictures/CM_Logo_512x512.png"
+jh_icon="/Library/User Pictures/XX_Logo_512x512.png"
 log=/Users/Shared/Provisiong-log.txt
-title="Colle McVoy Provisioning Bot 5000"
+title="XX Provisioning Bot 5000"
 dateStamp=$( date +'%F'_'%I:%M %p' )
 /bin/echo "
 Provisioning completed on $dateStamp

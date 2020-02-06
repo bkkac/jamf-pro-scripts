@@ -8,7 +8,7 @@ appIcon="CreativeCloud.icns" ## Find the icon name in: "/"$appPath"/"$applicatio
 jamfHelperPath="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
 jh_icon="/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/ApplicationsFolderIcon.icns"
 jamfPath="/usr/local/jamf/bin/jamf"
-title="Colle McVoy Provisioning Bot 5000"
+title="XX Provisioning Bot 5000"
 ##########- DONT NOT EDIT BELOW THIS LINE -########## ###############
 appPath="${appPath:-Applications}"
 dateStamp=$( date "+%a %b %d %H%M%S" )

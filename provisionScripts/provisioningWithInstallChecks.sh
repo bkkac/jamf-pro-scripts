@@ -36,7 +36,7 @@
 ####################################################################################################
 jamfHelperPath="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
 ## this works when quoteing the the var
-jh_icon="/Library/User Pictures/CM_Logo_512x512.png"
+jh_icon="/Library/User Pictures/XX_Logo_512x512.png"
 jamfPath="/usr/local/jamf/bin/jamf"
 count="1"
 #################################

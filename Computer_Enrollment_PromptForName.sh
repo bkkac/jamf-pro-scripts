@@ -26,9 +26,9 @@ computerName=$(/bin/launchctl asuser "${loggedInUID}" sudo -iu "${loggedInUser}"
 tell application "System Events"
 activate
 with timeout of 120 seconds
-set r to display dialog "Change compuer name?" with title "Colle McVoy Computer Rename 8000" buttons {"No", "Yes"} default button "Yes" giving up after 120 -- seconds
+set r to display dialog "Change compuer name?" with title "XX Computer Rename 8000" buttons {"No", "Yes"} default button "Yes" giving up after 120 -- seconds
              if r's gave up or r's button returned is not "No" then
-set answer to text returned of (display dialog "Set Computer Name" with title "Colle McVoy Computer Rename 8000" default answer "$(system_profiler SPHardwareDataType | awk '/Serial/ {print $4}')")
+set answer to text returned of (display dialog "Set Computer Name" with title "XX Computer Rename 8000" default answer "$(system_profiler SPHardwareDataType | awk '/Serial/ {print $4}')")
 end if
 end timeout
 end tell
@@ -53,7 +53,7 @@ echo "Computer Name set to $computerName"
 /bin/launchctl asuser "${loggedInUID}" sudo -iu "${loggedInUser}" /usr/bin/osascript<<EOL
 tell application "System Events"
 activate
-display dialog "Computer Name set to " & host name of (system info) buttons {"OK"} default button 1 with title "Colle McVoy Computer Rename 8000" giving up after 5
+display dialog "Computer Name set to " & host name of (system info) buttons {"OK"} default button 1 with title "XX Computer Rename 8000" giving up after 5
 end tell
 EOL
 

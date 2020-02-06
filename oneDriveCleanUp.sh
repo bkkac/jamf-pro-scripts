@@ -115,7 +115,7 @@ if __name__ == "__main__":
             None, None, None) or [None])[0]
         username = [username, ""][username in [u"loginwindow", None, u""]]
         # Check for OneDrive path
-        ABSOLUTE_PATH = "/Users/" + username + "/OneDrive - Colle McVoy"
+        ABSOLUTE_PATH = "/Users/" + username + "/OneDrive - XX"
         isDir = os.path.isdir(ABSOLUTE_PATH)
         print(isDir)
         if not isDir:

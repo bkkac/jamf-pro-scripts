@@ -5,7 +5,7 @@ SSIDS=$(networksetup -listpreferredwirelessnetworks "en0" | sed '1d')
 CURRENTSSID=$(networksetup -getairportnetwork "en0" | sed 's/^Current Wi-Fi Network: //')
 
 while read -r SSID; do
-  if [ "$SSID" == "CMTrusted" ]; then
+  if [ "$SSID" == "XXTrusted" ]; then
     echo Skipping $SSID
   elif [ "$SSID" == "$CURRENTSSID" ]; then
     echo Skipping your current network $SSID

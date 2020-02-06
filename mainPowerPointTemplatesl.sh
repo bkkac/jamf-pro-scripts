@@ -9,7 +9,7 @@ appIcon="/Applications/Microsoft PowerPoint.app/Contents/Resources/POTX.icns"
 jamfHelperPath="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
 jh_icon="/Applications/Microsoft PowerPoint.app/Contents/Resources/POTX.icns"
 jamfPath="/usr/local/jamf/bin/jamf"
-title="Colle McVoy Provisioning Bot 5000"
+title="XX Provisioning Bot 5000"
 
 ##########- DONT NOT EDIT BELOW THIS LINE -########## ###############
 dateStamp=$( date "+%a %b %d %H%M%S" )

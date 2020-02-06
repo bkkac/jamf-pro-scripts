@@ -5,5 +5,5 @@ user=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; 
 
 
 # Need to run this as the loged in user
-/usr/bin/su $user defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName "colle mcvoy" path "/Library/Screen\ Savers/colle\ mcvoy.saver"
+/usr/bin/su $user defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName "XX" path "/Library/Screen\ Savers/colle\ mcvoy.saver"
 exit 0

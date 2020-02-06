@@ -11,7 +11,7 @@
 jamf policy
 
 ## Var for the last time user restarted and hit yes
-UpdatesRunDate=`defaults read /Library/Preferences/com.cm.imaging UpdatesRunDate`
+UpdatesRunDate=`defaults read /Library/Preferences/com.XX.imaging UpdatesRunDate`
 if [[ '$UpdatesRunDate' != "" ]]; then
    echo "Updates Run Date has run"
 else

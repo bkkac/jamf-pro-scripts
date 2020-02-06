@@ -15,13 +15,13 @@ updaterConfigFile=/Library/Application\ Support/Adobe/AAMUpdater/1.0/AdobeUpdate
 # /Library/Application\ Support/Adobe/AAMUpdater/1.0/AdobeUpdater.Overrides
 
 # Path to your preferences 
-cmPrefs=/Library/Preferences/com.cm.imaging
+XXPrefs=/Library/Preferences/com.XX.imaging
 echo "RUMconfigInstalled version 1.1"
 echo Is RUM installed?
 sleep 2
 	if [ -e $RUM ]; then
 		echo "RUM installed set com.imaging RUM to RUMInstalled & check for AdobeUpdater.Overrides file"
-		/usr/bin/defaults write $cmPrefs RUM "RUMInstalled"
+		/usr/bin/defaults write $XXPrefs RUM "RUMInstalled"
 		sleep 2
 		if [ -f "$updaterConfigFile" ]; then
 			sleep 2
@@ -29,14 +29,14 @@ sleep 2
 			# clean up the result so it only shows what we want
 			result=`/bin/cat "$updaterConfigFile" | grep -m 1 "Domain" | sed -e 's/<[^>]*>//g' | sed 's:http\://::g' | awk '{print $1}'`
 			sleep 2
-			echo Setting preference of com.cm.imaging AdobeUpdater.Overrides
-			/usr/bin/defaults write $cmPrefs AdobeUpdater.Overrides "$result"
+			echo Setting preference of com.XX.imaging AdobeUpdater.Overrides
+			/usr/bin/defaults write $XXPrefs AdobeUpdater.Overrides "$result"
 			sleep 2
 			echo Exit this script RUM and AdobeUpdater.Overrides file are installed and Preferences are set
 			exit 0
 		else 
 			echo "AdobeUpdater.Overrides file NOT found, set result as NO-AdobeUpdater.Overrides file"	
-			/usr/bin/defaults write /Library/Preferences/com.cm.imaging AdobeUpdater.Overrides "NO-AdobeUpdater.Overrides"
+			/usr/bin/defaults write /Library/Preferences/com.XX.imaging AdobeUpdater.Overrides "NO-AdobeUpdater.Overrides"
 			sleep 2
 			echo Triggering policy to install RUM and AdobeUpdater.Overrides file
 			/usr/sbin/jamf policy -trigger InstallRUM
@@ -45,7 +45,7 @@ sleep 2
 		fi
 	else
 		echo RUM not installed lets install it....
-		/usr/bin/defaults write /Library/Preferences/com.cm.imaging RUM "RUMnotInstalled"
+		/usr/bin/defaults write /Library/Preferences/com.XX.imaging RUM "RUMnotInstalled"
 		## Trigger policy to install RUM and AdobeUpdater.Overrides file
 		/usr/sbin/jamf policy -trigger InstallRUM
 		wait
@@ -54,31 +54,31 @@ sleep 2
 echo Run through again as something was missing.....
 if [ -e $RUM ]; then
 		echo "RUM installed set com.imaging RUM to RUMInstalled & check for AdobeUpdater.Overrides file"
-		/usr/bin/defaults write /Library/Preferences/com.cm.imaging RUM "RUMInstalled"
+		/usr/bin/defaults write /Library/Preferences/com.XX.imaging RUM "RUMInstalled"
 		## is the AdobeUpdater.Overrides file installed?
 		if [ -f "$updaterConfigFile" ]; then
 			echo "AdobeUpdater.Overrides file found set result as AdobeUpdater.Overrides"
 			result=`/bin/cat "$updaterConfigFile" | grep -m 1 "Domain" | sed -e 's/<[^>]*>//g' | sed 's:http\://::g' | awk '{print $1}'`
-			## Set a preference to com.cm.imaging
-			/usr/bin/defaults write /Library/Preferences/com.cm.imaging AdobeUpdater.Overrides "$result"
+			## Set a preference to com.XX.imaging
+			/usr/bin/defaults write /Library/Preferences/com.XX.imaging AdobeUpdater.Overrides "$result"
 			echo Exit this script RUM and AdobeUpdater.Overrides file are installed
 			exit 0
 		else 
 			echo "AdobeUpdater.Overrides file NOT found, set result as NO-AdobeUpdater.Overrides file"	
-			/usr/bin/defaults write /Library/Preferences/com.cm.imaging AdobeUpdater.Overrides "NO-AdobeUpdater.Overrides"
+			/usr/bin/defaults write /Library/Preferences/com.XX.imaging AdobeUpdater.Overrides "NO-AdobeUpdater.Overrides"
 			## Trigger policy to install RUM and AdobeUpdater.Overrides file
 			/usr/sbin/jamf policy -trigger InstallRUM
 			## Check the AdobeUpdater.Overrides again
 			result=`/bin/cat "$updaterConfigFile" | grep -m 1 "Domain" | sed -e 's/<[^>]*>//g' | sed 's:http\://::g' | awk '{print $1}'`
-			## Set a preference to com.cm.imaging
-			/usr/bin/defaults write /Library/Preferences/com.cm.imaging AdobeUpdater.Overrides "$result"
+			## Set a preference to com.XX.imaging
+			/usr/bin/defaults write /Library/Preferences/com.XX.imaging AdobeUpdater.Overrides "$result"
 			echo RUM and AdobeUpdater.Overrides file now installed exit script
 			exit 0
 
 		fi
 	else
 		echo RUM not installed lets install it....
-	/usr/bin/defaults write /Library/Preferences/com.cm.imaging RUM "RUMnotInstalled"
+	/usr/bin/defaults write /Library/Preferences/com.XX.imaging RUM "RUMnotInstalled"
 	## Trigger policy to install RUM and AdobeUpdater.Overrides file
 	/usr/sbin/jamf policy -trigger InstallRUM
 	wait

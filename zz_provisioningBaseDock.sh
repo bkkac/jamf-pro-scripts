@@ -120,6 +120,6 @@ $du --remove "Keynote" --no-restart
 # $du --add '' --type spacer --section apps --allhomes --position end
 $du --move 'System Preferences' --before 'Google Chrome'--no-restart
 $du --add "/Applications/Self Service.app" --position end
-defaults write /Users/$user/Library/Preferences/com.cm.provision.plist CM-defaultDockSet -bool True
+defaults write /Users/$user/Library/Preferences/com.XX.provision.plist XX-defaultDockSet -bool True
 #
 exit 0

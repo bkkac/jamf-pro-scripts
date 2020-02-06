@@ -15,7 +15,7 @@ jh_icon="/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/Applic
 #
 jamfPath="/usr/local/jamf/bin/jamf"
 #
-title="Colle McVoy Provisioning Bot 5000"
+title="XX Provisioning Bot 5000"
 ##########- DONT NOT EDIT BELOW THIS LINE -########## ###############
 dateStamp=$( date "+%a %b %d %H%M%S" )
 #

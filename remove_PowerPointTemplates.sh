@@ -2,7 +2,7 @@
 ## Script to remove the old XX Power Point templates 
 ## Get the currently logged in user
 user=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");'`
-## Check to see if there are old CM or Exponent templates 
+## Check to see if there are old XX or XX templates 
 ## If so remove them
 # full path for reference
 # /Users/userName/Library/Group\ Containers/UBF8T346G9.Office/User\ Content.localized/Templates.localized/

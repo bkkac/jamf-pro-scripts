@@ -25,7 +25,7 @@ now=`date +%s`
 # echo "$the_date" >> $LOGFILE
 
 ## Var for the last time user restarted and hit yes
-UpdatesRunDate=`defaults read /Library/Preferences/com.cm.imaging UpdatesRunDate`
+UpdatesRunDate=`defaults read /Library/Preferences/com.XX.imaging UpdatesRunDate`
 
 then=$(date -j -f "%Y-%m-%d" "$UpdatesRunDate" +%s)
 
@@ -101,7 +101,7 @@ echo ""
 jhPath="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
 
 icon_folder="/Library/User Pictures"
-logo_K="CM_Square.png"
+logo_K="XX_Square.png"
 
 ## PREP MESSAGE
 title="Important Action Required. Restart and click yes to finish installing important updates."

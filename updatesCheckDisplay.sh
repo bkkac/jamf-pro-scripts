@@ -43,7 +43,7 @@
 # 	Patch to the icon you want to use for the jamf helper window.
 icon_folder="/Library/User Pictures"
 #	Icon file name
-logo_K="CM_Square.png"
+logo_K="XX_Square.png"
 # 	Create a log file for trouble shooting 
 LOGFILE="/Library/Logs/updatesCheckDisplay.log"
 #
@@ -153,7 +153,7 @@ kill $policyCheck
 # 	fi
 
 # ## Var for the last time user restarted and hit yes
-# UpdatesRunDate=`defaults read /Library/Preferences/com.cm.imaging UpdatesRunDate`
+# UpdatesRunDate=`defaults read /Library/Preferences/com.XX.imaging UpdatesRunDate`
 # if [[ '$UpdatesRunDate' != "" ]]; then
 #    echo "Updates Run Date has run" >> $LOGFILE
 # else

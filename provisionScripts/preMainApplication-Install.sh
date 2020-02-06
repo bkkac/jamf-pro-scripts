@@ -9,7 +9,7 @@ jh_icon="/Applications/Self Service.app/Contents/Resources/AppIcon.icns"
 #
 jamfPath="/usr/local/jamf/bin/jamf"
 #
-title="Colle McVoy Provisioning Bot 5000"
+title="XX Provisioning Bot 5000"
 #
 log=/Users/Shared/Provisiong-log-$dateStamp.txt
 #

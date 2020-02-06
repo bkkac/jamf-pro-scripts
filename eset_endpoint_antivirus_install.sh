@@ -5,7 +5,7 @@
 # Path to the ESET Endpoint Antivirus installer package file
 pkgpath="/private/tmp/eea_osx_en_0.pkg"
 # Path to exported settings file you wish to import
-settingsfile="/private/tmp/cmSettingsV-02"
+settingsfile="/private/tmp/XXSettingsV-02"
 # Set the variable below to "replace" if you are going to apply your own user settings to the ESET GUI (e.g. notifications/alerts) 
 replaceguicfg="yes"
 # Path to the directory containing your custom ESET user GUI configuration

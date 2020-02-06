@@ -74,16 +74,16 @@ echo "jamf helper result was $update"
 if [ "$update" == "0" ]; then
 
 echo "User hit yes."
-# Add the date updates were run to com.cm.imaging plist so we can report on this
-# echo "updateing com.cm.imaging"
-# /usr/bin/defaults write /Library/Preferences/com.cm.imaging UpdatesRunDate "$the_date" 
+# Add the date updates were run to com.XX.imaging plist so we can report on this
+# echo "updateing com.XX.imaging"
+# /usr/bin/defaults write /Library/Preferences/com.XX.imaging UpdatesRunDate "$the_date" 
 usr/local/bin/jamf policy -id $jamfPolicyID
 
 exit 0
 else
 echo "user chose No";
-# Add the date updates were canceld to com.cm.imaging plist so we can report on this
-# sudo /usr/bin/defaults write /Library/Preferences/com.cm.imaging UpdatesCancelDate "$the_date" 
+# Add the date updates were canceld to com.XX.imaging plist so we can report on this
+# sudo /usr/bin/defaults write /Library/Preferences/com.XX.imaging UpdatesCancelDate "$the_date" 
 exit 0
 fi
 

@@ -8,7 +8,7 @@ appIcon="/Library/Printers/RICOH/Icons/154E.icns"
 jamfHelperPath="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
 jh_icon="/System/Library/PreferencePanes/PrintAndScan.prefPane/Contents/Resources/PrintScanPref.icns"
 jamfPath="/usr/local/jamf/bin/jamf"
-title="Colle McVoy Provisioning Bot 5000"
+title="XX Provisioning Bot 5000"
 ##########- DONT NOT EDIT BELOW THIS LINE -########## ###############
 appPath="${appPath:-Applications}"
 dateStamp=$( date "+%a %b %d %H%M%S" )
