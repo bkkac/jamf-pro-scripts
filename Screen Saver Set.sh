@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-
+#
 #### Set Screen Saver
 #### Will Pierce
 #### September 3, 2014
