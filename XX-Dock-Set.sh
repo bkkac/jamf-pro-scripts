@@ -1,5 +1,5 @@
 #!/bin/sh
-# Extension Attribute For CM Dock
+# Extension Attribute For XX Dock
 version=$(dockutil --find ServeBaconrs)
 if [[ $version == *"not"* ]]; then
 	# App is not installed
