@@ -6,7 +6,7 @@
 #	- changed how home folder is derived
 # Author:  Steve Wood (swood@integer.com)
 ## 2017 WIll Pierce
-## COLLE+McVOY
+##
 ## https://github.com/stevewood-tx/CasperScripts-Public/blob/master/FixDock/fixDock.sh
 ## 20170320
 ### 2018 06 20 WHP
